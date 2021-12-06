@@ -10,6 +10,7 @@ export function Home(){
     const [flag, setFlag] = useState([]);
     const [infoCard, setInfoCard] = useState('');
 
+
 	useEffect(() => {
         if(infoCard === ""){
             axios.get(`https://wtt-countries.herokuapp.com/countries`)
@@ -34,7 +35,9 @@ export function Home(){
                             value={infoCard} 
                             onChange={(resultCard) => setInfoCard(resultCard)} 
                         />
-                        <Filter />
+                        <Filter 
+                            filterRes={infoCard} 
+                        />
                     </div>
                     {flag && (
                         <div className="flag">
