@@ -22,10 +22,16 @@
             img {
                 width: 414px;
                 height: 296px;
+                @media(max-width: 991px){
+                    width: 100%;
+                }
             }
         } 
         .result__card--info{
             padding: 0 0 0 37px;
+            @media(max-width: 991px){
+                padding: 0 0 30px 10px;
+            }
             .result__card--title {
                 color: #4A4A4A;
                 font-size: 32px;
