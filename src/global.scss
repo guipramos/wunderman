@@ -1,0 +1,58 @@
+
+// ## Dark Mode ##
+
+    // Variaveis de cores
+
+    .dark-mode{
+        background-color: #202D36;
+        color: #FFFFFF;
+        .header{
+          background-color: #2B3743;
+          .top__title, .top__change__theme{
+            color: #fff;
+          }
+        }
+        .search .search__box{
+          background: #2B3743;
+          &::-webkit-input-placeholder{
+            color: lighten(rgba(255, 255, 255, 0.5), 50%);
+          }
+        }
+        .filter select{
+            background: #2B3743;
+            option{
+                color: #fff;
+            }
+        }
+        .flag .flag__item{
+            background: #2B3743;
+            .flag__item--info{
+                .flag__item--title{
+                    color: #fff;
+                }
+                span{
+                    color: #fff;
+                }
+            }
+        }
+        .result__card{
+          .result__card--btnBack {
+              color: #fff;
+          }
+        } 
+        .result__card{
+          .result__card--item{
+            .result__card--info{
+              .result__card__content{
+                span {
+                  color: #fff;
+              }
+              } 
+              .result__card--title {
+                  color: #fff;
+              }
+            } 
+          } 
+        } 
+      
+      }
