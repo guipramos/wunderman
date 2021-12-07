@@ -8,21 +8,21 @@ import axios from "axios";
 export function Home(){
 
     const [flag, setFlag] = useState([]);
-    const [infoCard, setInfoCard] = useState('');
+    const [searchResult, setSearchResult] = useState('');
 
 	useEffect(() => {
-        if(infoCard === ""){
+        if(searchResult === ""){
             axios.get(`https://wtt-countries.herokuapp.com/countries`)
             .then((response) => {
                 setFlag(response.data);
             })
         }else{
-            axios.get(`https://wtt-countries.herokuapp.com/countries?continent=${infoCard}`)
+            axios.get(`https://wtt-countries.herokuapp.com/countries?continent=${searchResult}`)
             .then((response) => {
                 setFlag(response.data);
             })
         }
-	}, [infoCard]);
+	}, [searchResult]);
 
     return (
         <>
@@ -31,11 +31,11 @@ export function Home(){
                 <div className="container">
                     <div className="field__search">
                         <Search 
-                            value={infoCard} 
-                            onChange={(resultCard) => setInfoCard(resultCard)} 
+                            value={searchResult} 
+                            onChange={(resultCard) => setSearchResult(resultCard)} 
                         />
                         <Filter 
-                            onChange={(data) => setInfoCard(data)}
+                            onChange={(data) => setSearchResult(data)}
                         />
                     </div>
                     {flag && flag.length
