@@ -10,11 +10,9 @@
     }
     .flag__item {
         width: 242px;
-        // height: 303px;
         background: #FFFFFF;
         border: 1px solid rgba(74, 74, 74, 0.1);
         border-radius: 2px;
-        margin: 0 auto;
         @media(max-width: 991px){
             width: 100%;
         }
