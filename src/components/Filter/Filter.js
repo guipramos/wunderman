@@ -5,7 +5,11 @@ export function Filter({onChange}){
     const ref = useRef();
 
     function handleChange(){
-        onChange(ref.current.value);
+        if(ref.current.value){
+            onChange(ref.current.value);
+        }else{
+            alert("Nenhum continente encontrado!")
+        }
     }
 
     return (

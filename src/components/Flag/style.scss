@@ -1,9 +1,10 @@
 .flag {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(242px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     column-gap: 5px;
-    row-gap: 60px;
+    grid-row-gap: 60px;
     margin-bottom: 80px;
+
     @media(max-width: 320px){
         grid-template-columns: 100%;
     }

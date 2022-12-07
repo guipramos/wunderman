@@ -12,12 +12,13 @@ export function Home(){
 
 	useEffect(() => {
         if(searchResult === ""){
-            axios.get(`https://wtt-countries.herokuapp.com/countries`)
+            axios.get(`https://restcountries.com/v3.1/all`)
             .then((response) => {
                 setFlag(response.data);
+                console.log(response.data);
             })
         }else{
-            axios.get(`https://wtt-countries.herokuapp.com/countries?continent=${searchResult}`)
+            axios.get(`https://restcountries.com/v3.1/name/${searchResult}`)
             .then((response) => {
                 setFlag(response.data);
             })
@@ -42,7 +43,7 @@ export function Home(){
                         ?   
                             <div className="flag">
                                 {flag.map((item, index) =>
-                                    <Flag flag={item.flag} name={item.name} population={item.population} region={item.name} capital={item.capital} key={index} />
+                                    <Flag flag={item.flags.png} name={item.name.common} population={item.population} region={item.name} capital={item.capital} key={index} />
                                 )}	
                             </div>
                         :   <p>Não foi encontrado nenhum país</p>
