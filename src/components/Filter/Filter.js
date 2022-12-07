@@ -19,7 +19,7 @@ export function Filter({onChange}){
                     <option value="">Filter by Region</option>
                     <option value="Africa">África</option>
                     <option value="America">América</option>
-                    <option value="Asia">Ásia</option>
+                    <option value="Asia">Asia</option>
                     <option value="Europe">Europa</option>
                     <option value="Oceania">Oceânia</option>
                 </select> 

@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 import "./style.scss";
 
 export function Flag(props){
-
+    console.log("Props das props", props);
     return (
         <div className="flag__item">
             <div className="flag__item--img">
-                <Link to={`flag/${props.name}`}>
+                <Link to={`/flag/${props.name}`}>
                     <img src={props.flag} alt="Flag" />
                 </Link>
             </div>
